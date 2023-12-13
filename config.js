@@ -4,34 +4,34 @@ if (fs.existsSync('config.env')) require('dotenv').config({ path: __dirname+'/co
 
 //═══════[Required Variables]════════\\
 global.owner = process.env.OWNER_NUMBER || '263715042697'  // Make SURE its Not Be Empty, Else Bot Stoped And Errors,
-global.mongodb = process.env.MONGODB_URI || "mongodb+srv://ahil1:787191784abhi@ahil1.kzr1tt3.mongodb.net/?retrywrites=true&w=majority"
+global.mongodb = process.env.MONGODB_URI || "_mongodb._tcp.cluster0wyozvas.mongodb.net"
 global.port= process.env.PORT || 5000
 global.email = 'maxdavid126@gmail.com'
 global.github = 'https://github.com/Bladeh4x/BLADE-MD'
 global.location = 'Lahore pakistan'
 global.gurl = 'https://instagram.com/alex_david/' // add your username
 global.sudo = process.env.SUDO || "263715042697"
-global.devs = '2348059540212'
+global.devs = '263715042697'
 global.website = 'https://github.com/Bladeh4x/BLADE-MD' //wa.me/+91000000000000
 global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/3f3ae4aace2d012c11509.jpg'
 module.exports = {
   sessionName: process.env.SESSION_ID || "",      //Put Your Session Id Here
   author:  process.env.PACK_AUTHER ||  'BLADE BOT',
   packname:  process.env.PACK_NAME || 'MADE BY ALEX DAVID',
-  
-  botname:   process.env.BOT_NAME === undefined ? "BLADE-MD" : process.env.BOT_NAME,'NyakazTge Bot'
-  ownername: process.env.OWNER_NAME === undefined ? 'alexdavid' : process.env.OWNER_NAME,'TiDollar'
-  auto_read_status :  process.env.AUTO_READ_STATUS === undefined ? false : process.env.AUTO_READ_STATUS,'true'
-  autoreaction:  process.env.AUTO_REACTION  === undefined ? false : process.env.AUTO_REACTION ,'true'
+ 
+  botname:   process.env.BOT_NAME === undefined ? "NyakazThe bot" : process.env.BOT_NAME,
+  ownername: process.env.OWNER_NAME === undefined ? 'Nyakaz' : process.env.OWNER_NAME,
+  auto_read_status :  process.env.AUTO_READ_STATUS === undefined ? true : process.env.AUTO_READ_STATUS,
+  autoreaction:  process.env.AUTO_REACTION  === undefined ? true : process.env.AUTO_REACTION,
   antibadword :  process.env.ANTI_BAD_WORD === undefined ? 'nbwoed' : process.env.ANTI_BAD_WORD,
-  alwaysonline:  process.env.ALWAYS_ONLINE === undefined ? false : process.env.ALWAYS_ONLINE,'true'
-  antifake : process.env.FAKE_COUNTRY_CODE === undefined ? '234' : process.env.FAKE_COUNTRY_CODE,
-  readmessage:  process.env.READ_MESSAGE === undefined ? false : process.env.READ_MESSAGE,'true'
+  alwaysonline:  process.env.ALWAYS_ONLINE === undefined ? true : process.env.ALWAYS_ONLINE,
+  antifake : process.env.FAKE_COUNTRY_CODE === undefined ? '263' : process.env.FAKE_COUNTRY_CODE,
+  readmessage:  process.env.READ_MESSAGE === undefined ? true : process.env.READ_MESSAGE,
   auto_status_saver: process.env.AUTO_STATUS_SAVER === undefined ? false : process.env.AUTO_STATUS_SAVER,
-  HANDLERS:  process.env.PREFIX === undefined ? '.' : process.env.PREFIX,','
+  HANDLERS:  process.env.PREFIX === undefined ? ',' : process.env.PREFIX,
   warncount : process.env.WARN_COUNT === undefined ? 3 : process.env.WARN_COUNT,
   disablepm:  process.env.DISABLE_PM === undefined ? false : process.env.DISABLE_PM,
-  levelupmessage:  process.env.LEVEL_UP_MESSAGE === undefined ? false : process.env.LEVEL_UP_MESSAGE,
+  levelupmessage:  process.env.LEVEL_UP_MESSAGE === undefined ? true : process.env.LEVEL_UP_MESSAGE,
   antilink:  process.env.ANTILINK_VALUES === undefined ? 'chat.whatsapp.com' : process.env.ANTILINK_VALUES,
   antilinkaction: process.env.ANTILINK_ACTION === undefined ? 'remove' : process.env.ANTILINK_ACTION,
   BRANCH: 'main', 
@@ -55,7 +55,5 @@ let file = require.resolve(__filename)
 fs.watchFile(file, () => {
 	fs.unwatchFile(file)
 	console.log(`Update'${__filename}'`)
-    delete require.cache[file]
-	require(file)
 })
  
